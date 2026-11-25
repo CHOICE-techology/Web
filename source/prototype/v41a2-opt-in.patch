@@ -1,0 +1,35 @@
+--- /tmp/web/r/source/prototype/main.js	2026-11-25 09:57:17.395361869 +0200
++++ main.js	2026-11-25 11:00:16.162982588 +0200
+@@ -343,9 +343,15 @@
+ const HERO_PORTRAIT = { ang: Math.atan2(-0.4, 15.5), rad: 15.6, y: 2.6, ty: 1.9 };
+ const heroPose = () => (innerWidth / innerHeight < 0.9 ? HERO_PORTRAIT : OPT.cam === 'v4' ? HERO_V4 : HERO_CYCLES);
+ const cam = { ang: 0.05, rad: 12.6, y: 0.32, ty: 0.6 };
++// V4.1a2 (opt-in, #cam-r): pull the intro camera back on narrow windows so the ribbon never leaves the frame.
++// The factor eases back to 1 during the final move, so the hero pose and the live camera are unchanged.
++const CAMR = flag(/cam-r/);
++const fitK = () => 1 + 0.5 * Math.max(0, 1.45 - innerWidth / innerHeight); // recomputed on every frame, so rotating a phone mid-intro stays correct
++const camK = { w: CAMR ? 1 : 0 };                                             // weight 1 during the intro, eased to 0 by the final move
+ const target = new THREE.Vector3();
+ function applyCam() {
+-  camera.position.set(cam.rad * Math.sin(cam.ang), cam.y, cam.rad * Math.cos(cam.ang));
++  const k = 1 + (fitK() - 1) * camK.w;
++  camera.position.set(cam.rad * k * Math.sin(cam.ang), cam.y, cam.rad * k * Math.cos(cam.ang));
+   target.set(0, cam.ty, 0); camera.lookAt(target);
+ }
+ 
+@@ -387,9 +393,15 @@
+   .to(cam, { rad: 10.3, y: 1.9, ty: 1.65, ang: 0.3, duration: 1.4 }, 4.2)
+   .to(cam, { ang: () => heroPose().ang, rad: () => heroPose().rad, y: () => heroPose().y, ty: () => heroPose().ty,
+     duration: 1.4, ease: 'power2.inOut' }, 5.6)
++  .to(camK, { w: 0, duration: 1.4, ease: 'power2.inOut' }, 5.6)
+   .call(goLive, null, 7);
+ 
++// V4.1a2 (opt-in, #strips-late): the dark strips fade in with the monolith, so they do not show through the bare ribbon.
++const STRIPS_LATE = flag(/strips-late/);
++const STRIP_BG = new THREE.Color('#F7F8F9');
++strips.children.forEach((m) => { m.userData.c0 = m.material.color.clone(); });
+ function applyState() {
++  if (STRIPS_LATE) { const f = Math.min(1, Math.max(0, (st.monolith - 0.05) / 0.5)); strips.visible = f > 0.002; strips.children.forEach((m) => m.material.color.copy(STRIP_BG).lerp(m.userData.c0, f)); }
+   horizon.scale.x = Math.max(st.horizon, 1e-4);
+   horizon.material.opacity = 0.9 * st.horizon * (1 - 0.55 * st.monolith);
+   revealPlane.constant = -0.05 + st.monolith * 3.3;
