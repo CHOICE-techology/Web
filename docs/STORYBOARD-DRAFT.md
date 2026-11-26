@@ -13,6 +13,16 @@ Labels: VERIFIED = read in a file or the brand book by Claude. USER-SUPPLIED = f
 - CORRECTION: ChatGPT says a folder opening is outside scope until V4.1b. The folder opening the ADD card already exists in the V4 prototype (docs/WHOLE-SITE-EXPERIENCE-ARCHITECTURE-DRAFT.md, section 6). V4.1b is only the certificate and briefcase. The ADD folder may be used at step 1 of How it works; nothing else is added.
 - NOT PROVIDED: choice-id-preview-source.zip. The text for DISCOVER, FIND, APPLY, SHARE, the YOU and WORK dots and the second toggle state is UNVERIFIED and stays blank below.
 
+## Decisions recorded from Alexander, 26 Nov 2026
+- Film zone movement: DECIDED, pinned and scrubbed (the 23 Nov handover). The camera follows the visitor's scrolling, the visitor stays in control and can go back. The 22 Nov staged and locked version is not used.
+- Film zone endpoint: DECIDED, after "No score" (option D). Alexander said "No score" is very important. He also said something "needs to be a bit up"; he has not yet said what, so confirm before building.
+- Phone: DECIDED, as in the 23 Nov amendment 4: own camera composition, native vertical scroll, no long pin. Exact phone gesture (tap, swipe or camera) is still to define.
+- Consequence for Option D: longest pin, so fast scrolling can skip the ethical boundary. Needs named holds or snap points, a short mobile version, and real iOS testing.
+- 26 Nov, later message: Alexander wants the 3D model to transform as the visitor scrolls, with information arriving from the side, a folder bringing information, and all live site information carried inside this film. This pushes the scene beyond "quiet poses" in the reading zone (DECISION 1 is now leaning toward a more active scene). Reading must stay easy.
+- Phone gesture: DECIDED in principle, the same scroll driven camera as desktop, with its own composition. Not tap stages. To satisfy "no long pin", use a fixed canvas with the sections scrolling over it, not a pinned section.
+- Section order: Alexander said "No score" goes up and "How it works" goes down. This would change the approved order (02 above 01). NOT applied. Needs his explicit yes, or the change can be limited to the film order only.
+- Still open: profile material, edge treatment, `#cam-r` and `#strips-late`, and the smaller questions in section 7.
+
 ## 2. Three separate experiences
 | Layer | What it is | Scroll | Status |
 |---|---|---|---|
@@ -80,8 +90,8 @@ Notes on differences from other drafts:
 - Performance: every figure is a target until measured. Record device, OS, browser, viewport, scene variant and duration. `#bench` does not measure the 7 s intro; test both.
 
 ## 7. ALEXANDER DECISIONS
-1. Film movement: staged or scrubbed (section 4).
-2. Film endpoint: after How it works or after No score.
+1. Film movement: DECIDED 26 Nov, pinned and scrubbed.
+2. Film endpoint: DECIDED 26 Nov, after No score (confirm what "a bit up" means).
 3. Tile meaning and what the dots PROOF, YOU, WORK highlight.
 4. Profile material (B at 0.72 leaning), edge treatment ("both" leaning), `#cam-r` and `#strips-late` as defaults after the device test.
 5. Symbols in 02 Our promise.
