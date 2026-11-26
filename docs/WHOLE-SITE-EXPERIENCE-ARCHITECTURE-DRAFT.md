@@ -89,7 +89,7 @@ Every pointer interaction needs a keyboard and touch equivalent, a visible focus
 11. The only HTML content in the prototype is one panel (ADD), Skip intro, Replay intro and an fps readout (hidden with the clean flag). The folder button is invisible until keyboard focus and is named "Open the folder: How it works, Add" for screen readers.
 12. The live section "02 Our promise" shows four check marks and four cross marks in its two lists (per docs/CONTENT-INVENTORY-DRAFT.md). The hard rule forbids check marks. Keep the words; Alexander decides how the symbols are handled. Do not change them silently.
 13. Not independently verified, and absent from two separate fetches of the live page text on 25 Nov: the detail text for DISCOVER, FIND, APPLY and SHARE; the YOU and WORK dot states; the "I am hiring" state of the toggle. They need the original choice-id-preview-source.zip (src/content.ts) or a DOM inspection. The Taila image's exact section (end of 06b or start of 07) also needs DOM verification.
-14. The X link differs between fetches: one reading gives https://x.com/CHOICE_ID, two others give https://x.com/CHOICE_ID_WORK. Telegram (t.me/CHOICE_ID_WORK) and LinkedIn (company/choice-id) agree. Check the live DOM before any link is copied.
+14. The X link differs between fetches: one reading gives https://x.com/CHOICE_ID, two others give https://x.com/CHOICE_ID_WORK. Telegram (t.me/CHOICE_ID_WORK) and LinkedIn (company/choice-id) agree. Check the live DOM before any link is copied. RESOLVED 26 Nov: a third fetch of the live header and footer gives https://x.com/CHOICE_ID_WORK. The inventory's CHOICE_ID is wrong.
 
 ## 9. Open decisions for Alexander (summary)
 1. Persistent quiet 3D state changes in the reading zone: yes or no (DECISION 1).
