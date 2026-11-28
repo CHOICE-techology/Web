@@ -1,3 +1,5 @@
+> **STATUS 26 Nov, 10:55: parts of this file are OUTDATED.** Alexander's corrected decisions (see the last block of STORYBOARD-DRAFT.md, "second block, CORRECTED") override anything above that says: film zone ends after No score / How it works; a separate natural-reading zone after the film; staged movement; five-section film. Current rule: the film covers ALL 17 blocks, Hero to Footer; order unchanged; scrubbed to scroll; phones own composition, no long pin. Sections below are kept as history until rewritten.
+
 # Content to motion map (Task 02)
 
 Date: 26 Nov 2026. Author: Claude, from docs/CONTENT-INVENTORY-DRAFT.md (Task 01, ChatGPT, checked by Claude) and docs/WHOLE-SITE-EXPERIENCE-ARCHITECTURE-DRAFT.md. Text only. No code, no renders, no model changes, nothing in /app. NOTHING HERE IS APPROVED. Every DECISION needs Alexander.

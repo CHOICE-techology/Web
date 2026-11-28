@@ -1,3 +1,5 @@
+> **STATUS 26 Nov, 10:55: parts of this file are OUTDATED.** Alexander's corrected decisions (see the last block, "second block, CORRECTED") override anything above that says: film zone ends after No score / How it works; a separate natural-reading zone after the film; staged movement; five-section film. Current rule: the film covers ALL 17 blocks, Hero to Footer; order unchanged; scrubbed to scroll; phones own composition, no long pin. Sections below are kept as history until rewritten.
+
 # Whole-site motion storyboard v0.1 (Task 03)
 
 Date: 26 Nov 2026. Author: Claude, from ChatGPT's deep research and handover of 26 Nov, checked against the repo files. Text only. No code, no render, no new assets, no change to the prototype, copy or /app. NOTHING HERE IS APPROVED. Every ALEXANDER DECISION marker belongs to him.
@@ -111,3 +113,20 @@ choice-id-preview-source.zip; the Ask a question code; the email target; the Ble
 - Any glow beyond a thin cyan signal or a very restrained rim, until Alexander defines "neon balloon".
 - A persistent stage beside the reading column instead of a fixed full canvas (layout change).
 - Folder, certificate or briefcase interactions beyond ADD (V4.1b).
+
+---
+
+## Decisions recorded from Alexander, 26 Nov 2026 (second block, CORRECTED 10:40)
+
+This replaces an earlier version of this block that was wrong (it moved No score above How it works and limited the film to five sections). Alexander corrected it:
+
+1. **The film covers ALL 17 blocks of the site**, Hero to Footer. Not five, not a pinned intro. The whole site is carried inside one continuous 3D film. The footer (information, regulations) is the last block of the film.
+2. **Section order stays as it is today.** "No score" stays where it is (Alexander: "let's stay number 2"). No reordering of page or film. READING NOTE: Claude reads "stay number 2" as "keep No score where it is now". If Alexander meant something else, correct this line.
+3. **Real elements stay real and usable inside the film:** the YouTube video (original embed stays), Team (shown well), Meet Taila (an animated moment), Ask a question (honest answer, entertaining), Questions/FAQ, Closing, Footer. They are HTML, not baked into the 3D.
+4. **Alexander's vision:** big glass block or square in the CHOICE iD style; folders appear around it, transform and move, each folder brings its own information (like the bottle demo: movement plus information arriving).
+5. **Phones:** same scroll-driven camera, own composition, no long pin.
+6. Superseded: "film ends after No score" and "film ends after How it works". The film now ends at the Footer.
+
+OPEN design question for Claude/ChatGPT (not Alexander): how to make a 17-block film without a 17-screen pin. Claude's proposal: one fixed 3D canvas behind the page, camera and glass scrubbed to scroll, each block scrolls over it; calm moments for video, form, FAQ and footer where the 3D rests and the real HTML leads.
+
+STILL NOT DONE: nothing built or rendered.
